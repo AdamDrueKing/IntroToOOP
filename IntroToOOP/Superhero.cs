@@ -27,7 +27,7 @@ namespace IntroToOOP
         get { return this.name; }
         }
 
-        public interface StrengthLevel
+        public int   StrengthLevel
         {
         get {return this.strengthLevel;}
         set {this.strengthLevel = value;}
@@ -36,7 +36,7 @@ namespace IntroToOOP
         public bool HasCape
         {
         get { return this.hasCape; }
-        set { this.HasCape = value; }
+        set { this.hasCape = value; }
         }
 
         //3 Constructors
@@ -59,5 +59,27 @@ namespace IntroToOOP
         this.power = power;
         this.hasCape = hasCape;
         }
+
+        //2 Methods
+        public void BattleNemesis()
+        {
+        this.StrengthLevel -= 10;
+        this.HasCape = false;
+        this.Costume = "tattered";
+        }
+
+        public void GetHealthy(string costume, int strengthLevel)
+        {
+        this.Costume = costume;
+        this.StrengthLevel = strengthLevel;
+        }
+    
+        public void AllyGained()
+        {
+        this.StrengthLevel += 10;
+        this.HasCape = false;
+        Console.WriteLine("Thank you for being a friend!!!");
+        }
+
     }
 }
