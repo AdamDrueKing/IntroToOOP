@@ -32,9 +32,13 @@ namespace IntroToOOP
         public int RunningSpeed
         {
             get { return this.runningSpeed; }
+            set { this.RunningSpeed = value; }
+        }
+        public double Weight
+        {
+            get { return this.weight; }
             set { this.weight = value; }
         }
-
         //****public int RunningSpeed {get; set;} does the same thing as above
 
         //Constructor:
